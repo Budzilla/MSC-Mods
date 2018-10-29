@@ -27,14 +27,11 @@ namespace NicotineGum
         public static FsmFloat ThirstFsm;
         private static readonly List<Vector3> _pos = new List<Vector3>
         {
-            new Vector3(-1550.640f, 4.646173f, 1183.058f),
-            new Vector3(-1550.632f, 4.646173f, 1183.035f),
-            new Vector3(-1550.624f, 4.646173f, 1183.011f),
-            new Vector3(-1550.617f, 4.646173f, 1182.988f),
-            new Vector3(-1550.608f, 4.646173f, 1182.964f)   
-            /*new Vector3(-1547.536f, 4.63f, 1180.284f),
-            new Vector3(-1547.452f, 4.63f, 1180.273f),
-            new Vector3(-1547.502f, 4.63f, 1180.339f)*/
+            new Vector3(-1550.492f, 4.646f, 1182.971f),
+            new Vector3(-1550.392f, 4.646f, 1183.008f),
+            new Vector3(-1550.484f, 4.646f, 1182.946f),
+            new Vector3(-1550.383f, 4.646f, 1182.982f),
+            new Vector3(-1550.427f, 4.646f, 1182.941f)
         };
 
         public NicotineGum()
