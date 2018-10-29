@@ -3,3 +3,6 @@ This repository contains the source code for any of my MSC mods. A quick summary
 
 ### Nicotine Gum
 An item to help reduce the rate at which the player gains stress.
+
+### Cinder Blocks
+Adds cinder blocks that can be used as makeshift jackstands.
