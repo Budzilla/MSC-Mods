@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using MSCLoader;
 using UnityEngine;
 
@@ -60,19 +60,17 @@ namespace CinderBlocks
             ab.Unload(false);
 
             // Load save
-            if (CinderBlocksSaveData.saveExists == true)
+         
+            CinderBlocksSaveData data = CinderBlocksSaveData.Deserialize<CinderBlocksSaveData>(CinderBlocksSaveData.SavePath);
+            for (int i = 0; i < data.Pos.Count; ++i)
             {
-                CinderBlocksSaveData data = CinderBlocksSaveData.Deserialize<CinderBlocksSaveData>(CinderBlocksSaveData.SavePath);
-                for (int i = 0; i < data.Pos.Count; ++i)
-                {
-                    GameObject cinderblock = GameObject.Instantiate<GameObject>(_block);
-                    cinderblock.transform.position = data.Pos[i];
-                    cinderblock.transform.rotation = data.Rot[i];
-                }
+                GameObject cinderblock = GameObject.Instantiate<GameObject>(_block);
+                cinderblock.transform.position = data.Pos[i];
+                cinderblock.transform.rotation = data.Rot[i];
             }
 
             // Initialize
-            if (CinderBlocksSaveData.saveExists == false)
+            if (data.Pos.Count <= 0)
             {
                 InitSpawn();
             }
